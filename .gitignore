@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# lokale kopie van de oude WordPress-site (niet publiceren)
+archief/
+*-archief-*.zip
