@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { url } from '../lib';
+---
+
+<Base title="Pagina niet gevonden" solidHeader>
+  <div class="container section">
+    <h1>Pagina niet gevonden</h1>
+    <p>Deze pagina bestaat niet (meer). Ga terug naar de <a href={url('/')}>homepage</a> of bekijk de <a href={url('/verwachte-artiesten/')}>agenda</a>.</p>
+  </div>
+</Base>

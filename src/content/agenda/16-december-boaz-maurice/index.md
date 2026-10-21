@@ -1,0 +1,7 @@
+---
+title: "Boaz & Maurice"
+date: 2023-12-16T20:00:00
+image: "./boaz-23-poster.jpg"
+---
+
+Een van de meest belovende jonge roots singer-songschrijvers van ons land woont in Harlingen, Friesland (niet te verwarren met het plaatsje Harlingen in het diepe zuiden van Texas) en hij heet Boaz Roelevink. Zeg maar gerust Boaz. Hij wordt geboren in Franeker en verhuist als kleuter met zijn familie naar Zuid-Afrika, waar hij het eerste muzikale licht ziet. Op zijn 13-de keert hij met het gezin terug naar Nederland, vestigt zich in Harlingen en bereikt vijf jaar later, in 2020, de finale van een SBS6 talentenshow. Daarop maakt hij kennis met meer ervaren muzikanten als John Verhoeven (beter bekend als Mercy John) en de Rotterdamse singer-songschrijver/producer Maurice van Hoek, die hem begeleiden in het schrijven van zijn eigen muziek. Het eerste resultaat heet Keep It Simple, een debuutplaat met Vlag en Wimpel. Zodra je bent bekomen van de verbazing hoe een prille twintiger kan beschikken over zo’n soulvolle en doorleefde stem, hoor je invloeden die reiken van zuidelijke soul tot de countrytraditie van de Texaanse barritons, verpakt in even persoonlijke als pakkende composities. ‘It’s so hard to keep it simple’, zingt hij, ‘but it’s easy to try’. En zo klinkt het ook. Op 16 december zijn Boaz en gitarist Maurice levend te bezichtigen in de ideale ambiance van Kultuurfabriek Kooiaap in Oude Leie. Deze aanstormende talenten weten waar Abraham de mostert haalt. Be there, or be square!

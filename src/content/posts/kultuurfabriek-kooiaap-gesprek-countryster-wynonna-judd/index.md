@@ -1,0 +1,31 @@
+---
+title: "Kultuurfabriek Kooiaap in gesprek met countryster Wynonna Judd"
+date: 2017-12-28T23:15:24
+cover: "./wynonna-judd-branson.jpg"
+home: true
+nieuws: false
+---
+
+,,Ik ben geboren om te zingen’’
+
+Door Harry de Jong
+
+De Amerikaanse countryzangeres Wynonna Judd (54) timmert op dit moment volop aan de weg met het stevige countryrockalbum Wynonna & The Big Noise.
+
+In Amerika hoort ze thuis in het rijtje van vedettes als Dolly Parton en Emmylou Harris, maar ze is nog nooit in Nederland geweest. ,,Misschien dat het nu eindelijk tijd wordt naar Holland te gaan,’’ peinst Wynonna. ,,Het is er nooit van gekomen omdat ik in Amerika altijd handen vol werk heb gehad. Maar ik zou mijn horizon best een stukje willen verbreden. En ik wil maar wat graag mijn muziek bij een nieuw publiek introduceren.’’
+
+De zangeres trok jarenlang met haar moeder Naomi als het duo The Judds door Amerika en was niet uit de hitlijsten weg te slaan, maar toen ma werd geveld door Hepatitis C, besloot Wynonna het op eigen houtje te proberen. En met succes, want ze bleef de ene na de andere hit scoren. Op dit moment is ze in de Verenigde Staten populairder dan ooit en dat is zeker niet in de laatste plaats te danken aan haar brede opvatting over muziek. Want Wynonna mag dan een countryzangeres in hart en nieren zijn, ze gaat ook het ruige rockwerk niet uit de weg.
+
+Het levensverhaal van de zangeres is trouwens op zich al net zo’n smartlap als de liedjes die ze zingt. Ooit leefde ze met haar moeder van de bijstand, tot de twee als succesvol countryduo schatrijk werden. ,,Voordat we bekend werden, woonden we in een huisje in de heuvels van Kentucky en daar hadden we zelfs geen telefoon en televisie,’’ vertelt Wynonna. ,,Mijn moeder was een gescheiden vrouw en zij en ik hadden ’s avonds niets om handen en dus gingen we maar liedjes zingen. We hadden toen niet durven dromen dat we daar ooit nog eens beroemd mee zouden worden. En ik had zeker niet kunnen bevroeden dat ik op mijn vijftigste helemaal financieel onafhankelijk zou zijn. Dat klinkt als een sprookje en in feite is dat ook wel zo, maar er zijn in de loop der tijd genoeg dingen gebeurd die helemaal niet zo sprookjesachtig waren. Ruzies met mijn moeder, frustraties om platen die flopten, mislukte relaties, het kwam allemaal op ons pad.’’
+
+,,Dat wij als duo van het ene op het andere moment succesvol waren, komt denk ik omdat wij gewoon op de juiste tijd op de juiste plaats waren,’’ vermoedt Wynonna. ,,Een zingende moeder en dochter waren er op dat moment niet in Nashville en we waren destijds dan ook redelijk uniek.’’ The Judds werden in de loop der tijd overladen met onderscheidingen en verkochten miljoenen platen, maar toen Naomi ziek werd, leek het sprookje van de ene op de andere dag te eindigen. Wynonna: ,,Vierentwintig uur per dag was ik samen met mijn moeder geweest en plotseling stond ik er alleen voor. Dat ik het overleefd heb en uiteindelijk toch een solocarrière van de grond heb gekregen, is op zich al een Godswonder. Maar ik denk dat het ook te maken heeft met de trouw van countrymuziekfans. Die mensen laten niet zomaar iemand vallen, ze zien hun favoriete artiesten als familie en die koesteren ze. En dankzij hun loyaliteit ben ik er nog steeds.’’
+
+**Contract**
+
+Wynonna was achttien jaar oud toen ze samen met haar moeder onder contract kwam bij RCA Records. ,,Ik was sinds Elvis de jongste artiest die ze onder hun hoede namen,’’ vertelt de zangeres. ,,Ik was nog heel naïef, maar ik heb sindsdien het leven wel leren kennen. Want het sprookje had ook een keerzijde. Mijn moeder en ik waren altijd onderweg met onze bus en ik werd elke dag op een andere parkeerplaats wakker. Als ik dan uit het raam keek, dacht ik: in welke stad zijn we nou in Godsnaam weer. Ik heb geleefd als een zigeunerin en ging van de ene mislukte liefde naar de andere. En dat zorgde dan weer voor heel wat depressies. Daar heb ik altijd heel openhartig over gezongen en mijn liedjes weerspiegelen door de jaren heen heel goed wie ik ben. Ik houd in mijn muziek niets achter. Als ik in een slechte bui ben, zing ik daar ook over. Je kunt dan ook van alles over mijn muziek zeggen, maar niet dat hij geen diepgang heeft. Want ik zing met mijn hart op mijn tong, bij wijze van spreken.’’
+
+,,Ik heb er ook nooit een geheim van gemaakt dat mijn moeder en ik niet het ideale duo waren. We hebben samen heel wat moeilijkheden gehad. Maar in feite is het toch ook niet normaal dat een meisje van 18 samen met haar moeder in een bus woont. Daar komen gewoon moeilijkheden van. Maar als we na een knallende ruzie op het podium stonden en naar het publiek keken, dan viel alles van ons af. Als we in de spotlichten stapten, was het alsof we de hemel binnengingen. Want al die blijde en verwachtingsvolle gezichten in de zaal deden ons alles vergeten. Soms hadden mijn moeder en ik zo’n ruzie dat ze ons in verschillende kleedkamers moesten zetten, maar op het podium merkte niemand daar iets van.’’
+
+**Boeken**
+
+,,Mijn moeder zingen sinds een jaar of zeven weer af en toe samen, maar ze is een hele tijd gestopt met muziek,’’ vervolgt Wynonna. ,,Ze heeft boeken geschreven en werkte als verpleegster in een ziekenhuis. Dat werk deed ze vroeger ook voordat ze mij kreeg. Om haar boeken te promoten reist ze door het land en geeft lezingen over gezondheid en geloof. Toen ze Hepatitis C had, hebben de dokters haar driemaal opgegeven, maar ze heeft het steeds overleefd. En dat inspireerde haar om erover te gaan schrijven en vertellen. Want ze is een medisch wonder en veel mensen kunnen hoop putten uit haar verhaal. Mijn moeder en ik hebben vijf jaar geleden nog een reünietour gedaan en misschien dat we zelfs samen ooit weer een plaat gaan opnemen. Alles wat ik weet in dit leven heb ik van mijn moeder geleerd. Haar belangrijkste les is om nooit de moed op te geven, hoe het soms ook tegenzit. En in de showbusiness wil je maar al te vaak opgeven, want er wordt zoveel van je verwacht dat je toch niet waar kunt maken. Elke dag krijg je wel kritiek dat je iets niet goed doet en het valt niet altijd mee daar bestand tegen te zijn. Maar ik blijf positief en geloven in wat ik doe. Want ik ben nou eenmaal geboren om te zingen en als ik daarmee zou ophouden, zou ik doodgaan.’’

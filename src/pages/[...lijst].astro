@@ -1,0 +1,197 @@
+---
+// Overzichtspagina's: de homepage (/, /page/2/, ...) en het nieuws (/nieuws/, /nieuws/page/2/, ...).
+import type { CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Banner from '../components/Banner.astro';
+import hero from '../assets/hero.png';
+import { posts, excerpt, url, PER_PAGE } from '../lib';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const [lijst, base] of [['home', ''], ['nieuws', 'nieuws']] as const) {
+    const all = await posts(lijst);
+    const total = Math.ceil(all.length / PER_PAGE);
+    for (let n = 1; n <= total; n++) {
+      paths.push({
+        params: { lijst: [base, n > 1 && `page/${n}`].filter(Boolean).join('/') || undefined },
+        props: { lijst, base, n, total, items: all.slice((n - 1) * PER_PAGE, n * PER_PAGE) },
+      });
+    }
+  }
+  return paths;
+}
+
+interface Props {
+  lijst: 'home' | 'nieuws';
+  base: string;
+  n: number;
+  total: number;
+  items: CollectionEntry<'posts'>[];
+}
+const { lijst, base, n, total, items } = Astro.props;
+const pageUrl = (i: number) => url(`/${base ? `${base}/` : ''}${i > 1 ? `page/${i}/` : ''}`);
+const isHome = lijst === 'home';
+---
+
+<Base title={isHome ? undefined : 'Nieuws'}>
+  {
+    isHome ? (
+      <>
+        <section class="hero">
+          <Image src={hero} alt="" widths={[800, 1400, 2000]} sizes="100vw" loading="eager" />
+          <div class="container">
+            <p class="script">Loaded with Music</p>
+          </div>
+        </section>
+        <section class="container welcome">
+          <h2>Welkom op de site van Kultuurfabriek Kooiaap</h2>
+          <p>
+            Kultuurfabriek Kooiaap organiseert op een fraaie locatie op het Friese platteland regelmatig concerten van aan
+            country en folk gerelateerde artiesten. Daarnaast zijn we een online magazine waarop je interviews kunt vinden
+            met bekende en vaak legendarische artiesten die iets hebben met folk en countrymuziek. Ook brengen we nieuwtjes
+            uit het wereldje van singer-songwriters en gaan we cd-recensies publiceren. Houd in ieder geval altijd onze{' '}
+            <a href={url('/verwachte-artiesten/')}>agenda</a> in de gaten.
+          </p>
+          <hr />
+        </section>
+      </>
+    ) : (
+      <Banner title="Nieuws" />
+    )
+  }
+
+  <section class:list={['grid-wrap', { wide: isHome }]}>
+    <div class="grid">
+      {
+        items.map((post) => (
+          <article class="card">
+            {post.data.cover && (
+              <a href={url(`/${post.id}/`)} tabindex="-1" aria-hidden="true">
+                <Image src={post.data.cover} alt="" width={600} />
+              </a>
+            )}
+            <div class="card-text">
+              <h5>
+                <a href={url(`/${post.id}/`)}>{post.data.title}</a>
+              </h5>
+              <p>{excerpt(post.body)}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    {
+      total > 1 && (
+        <nav class="pagination" aria-label="Pagina's">
+          {n > 1 && <a href={pageUrl(n - 1)} aria-label="Vorige">‹</a>}
+          {Array.from({ length: total }, (_, i) => i + 1).map((i) =>
+            i === n ? <span aria-current="page">{i}</span> : <a href={pageUrl(i)}>{i}</a>,
+          )}
+          {n < total && <a href={pageUrl(n + 1)} aria-label="Volgende">›</a>}
+        </nav>
+      )
+    }
+  </section>
+</Base>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: min(780px, 70vh);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #ccc;
+  }
+  .hero > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  .hero .container {
+    position: relative;
+  }
+  .script {
+    font: 800 clamp(64px, 13vw, 175px) / 1 'Italianno', cursive;
+    color: #ffcc5f;
+    margin: 0;
+  }
+
+  .welcome {
+    padding-top: 60px;
+  }
+
+  .grid-wrap {
+    width: min(var(--container), 100% - 32px);
+    margin: 30px auto 0;
+  }
+  .grid-wrap.wide {
+    width: calc(100% - 30px);
+  }
+  /* ponytail: CSS-kolommen i.p.v. echte masonry (volgorde loopt per kolom); CSS grid-lanes zodra alle browsers het hebben. */
+  .grid {
+    columns: 3 260px;
+    column-gap: 30px;
+  }
+  .wide .grid {
+    columns: 4 260px;
+  }
+  .card {
+    break-inside: avoid;
+    margin-bottom: 30px;
+    background: var(--white);
+  }
+  .card img {
+    width: 100%;
+  }
+  .card-text {
+    padding: 17px 15px 18px;
+  }
+  .card h5 {
+    margin-bottom: 10px;
+    line-height: 23px;
+  }
+  .card h5 a {
+    color: var(--heading);
+  }
+  .card h5 a:hover {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card p {
+    margin: 0;
+  }
+
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin: 30px 0 0;
+  }
+  .pagination a,
+  .pagination span {
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    border: 2px solid #e5e5e5;
+    border-radius: 4px;
+    color: #b4b4b4;
+    font: 18px var(--heading-font);
+  }
+  .pagination span {
+    background: #e3e3e3;
+    border-color: #e3e3e3;
+    color: var(--heading);
+  }
+  .pagination a:hover {
+    color: var(--heading);
+    text-decoration: none;
+  }
+</style>

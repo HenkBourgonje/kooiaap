@@ -1,0 +1,42 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Banner from '../components/Banner.astro';
+import locatie from '../assets/locatie.png';
+---
+
+<Base title="Locatie & Route">
+  <Banner title="Locatie & Route" />
+  <div class="container section columns">
+    <div>
+      <p>
+        De Kultuurfabriek Kooi-aap in Oude Leije is de centrale ontmoetingsplaats voor muzikale-, culturele-, creatieve
+        activiteiten en inspirerende bijeenkomsten in Fryslân.
+      </p>
+      <p>
+        De Kultuurfabriek Kooi-aap is gevestigd in het voormalige fabriekspand waar voorheen de wereldberoemde Kooi-aap
+        meeneem-heftrucks werden vervaardigd.
+      </p>
+      <p>
+        In een van deze ruimtes bevindt zich de Kultuurfabriek. In dit nieuwe kultuurcomplex bevinden zich een foto/film
+        studio, een galerie en een poppodium.
+      </p>
+      <p>
+        Kultuurfabriek Kooi-aap wil een podium bieden aan zangers, zangeressen, bands, fotografen, kunstenaars en
+        performers en de plek zijn waar kultuurminnende en creatieve mensen graag naar toe komen.
+      </p>
+      <h3>Adresgegevens</h3>
+      <p>
+        Kultuurfabriek Kooi-Aap<br />
+        Leijester Hegedijk 27 B<br />
+        9071 XB Oude Leije
+      </p>
+      <p>
+        <a class="button" href="https://www.google.com/maps/dir/?api=1&destination=Leijester+Hegedijk+27B,+9071+XB+Oude+Leije">Plan je route</a>
+      </p>
+    </div>
+    <div>
+      <Image src={locatie} alt="Kultuurfabriek Kooi-Aap" />
+    </div>
+  </div>
+</Base>

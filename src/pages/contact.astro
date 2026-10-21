@@ -1,0 +1,43 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Contact" solidHeader>
+  <div class="container section">
+    <iframe
+      class="map"
+      title="Kaart: Kultuurfabriek Kooi-Aap"
+      src="https://maps.google.com/maps?hl=nl&q=Leijester%20Hegedijk%2027%20B+(Kultuurfabriek%20Kooi-Aap)&z=14&output=embed"
+      loading="lazy"></iframe>
+
+    <div class="columns">
+      <div>
+        <h3>Contactgegevens</h3>
+        <p>
+          Kultuurfabriek Kooi-Aap<br />
+          Leijester Hegedijk 27 B<br />
+          9071 XB Oude Leije
+        </p>
+        <p>
+          Handelsnaam: Henk Bleeker fotografische vormgeving<br />
+          KvK 01070661 Btw NL109314256B01
+        </p>
+        <p><a href="http://henkbleeker.nl">Henk Bleeker Photography</a></p>
+      </div>
+      <div>
+        <h3>Neem contact op</h3>
+        <p>Henk Bleeker is te bereiken op: [0651] – 060 719</p>
+        <p><a class="button" href="mailto:hbleeker@xs4all.nl">Stuur een e-mail</a></p>
+      </div>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .map {
+    max-width: none;
+    aspect-ratio: auto;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+</style>

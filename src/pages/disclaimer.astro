@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import Banner from '../components/Banner.astro';
+import { url } from '../lib';
+---
+
+<Base title="Disclaimer">
+  <Banner title="Disclaimer" small />
+  <div class="container section">
+    <p>
+      Deze website is met de grootst mogelijke zorgvuldigheid samengesteld, waarbij Kultuurfabriek Kooi-Aap streeft naar
+      het geven van correcte en actuele informatie. Aan de informatie op de website van Kultuurfabriek Kooi-Aap kunnen
+      geen rechten ontleend worden.
+    </p>
+    <p>
+      Als u vragen heeft over de inhoud van de website, neem dan <a href={url('/contact/')}>contact</a> met ons op. Kultuurfabriek
+      Kooi-Aap aanvaardt geen aansprakelijkheid voor schade die verband houdt met het gebruik van deze website of met de
+      tijdelijke onmogelijkheid om deze website te raadplegen. Kultuurfabriek Kooi-Aap is niet verantwoordelijk voor de
+      inhoud van websites waarnaar wordt verwezen of websites die verwijzen naar deze website.
+    </p>
+    <h3>Copyright</h3>
+    <p>
+      Kultuurfabriek Kooi-Aap behoudt zich het auteursrecht op deze website voor. Uitsluitend met uitdrukkelijke
+      bronvermelding van Kultuurfabriek Kooi-Aap is het toegestaan de informatie op deze website geheel of gedeeltelijk op
+      enigerlei wijze over te nemen en/of te verspreiden.
+    </p>
+  </div>
+</Base>

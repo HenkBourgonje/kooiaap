@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import banner from '../assets/banner.jpeg';
+import bannerPost from '../assets/banner-post.jpg';
+
+interface Props {
+  title: string;
+  small?: boolean; // smalle kop met gecentreerde titel, zoals bij berichten
+}
+const { title, small = false } = Astro.props;
+---
+
+<section class:list={['banner', { small }]}>
+  <Image src={small ? bannerPost : banner} alt="" widths={[800, 1600, 2560]} sizes="100vw" loading="eager" />
+  <div class="container">
+    <h1>{title}</h1>
+  </div>
+</section>

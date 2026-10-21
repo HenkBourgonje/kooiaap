@@ -1,0 +1,339 @@
+:root {
+  --bg: #f6f6f6;
+  --text: #6c7a89;
+  --heading: #303030;
+  --accent: #c31b3c;
+  --gold: #d3b244;
+  --dark: #22313f;
+  --white: #fff;
+  --container: 1100px;
+  --header-h: 80px;
+  --heading-font: 'Lato', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/26px var(--body-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  min-height: 60vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin: 0 0 0.6em;
+}
+h1 { font-size: 35px; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+h4 { font-size: 17px; }
+h5 { font-size: 15px; letter-spacing: 3px; }
+
+p {
+  margin: 0 0 1.1em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+  margin: 0 0 1.1em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #c4c4c4;
+  margin: 2em 0;
+}
+
+.container {
+  width: min(var(--container), 100% - 32px);
+  margin-inline: auto;
+}
+
+.button {
+  display: inline-block;
+  background: var(--heading);
+  color: var(--white);
+  font: 700 12px/1 var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 13px 22px;
+  border-radius: 2px;
+}
+.button:hover {
+  background: var(--accent);
+  text-decoration: none;
+}
+
+/* ---------- Kop ---------- */
+
+.site-header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10;
+  height: var(--header-h);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+.site-header.scrolled,
+.site-header.solid {
+  background: rgba(255, 255, 255, 0.97);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.header-inner {
+  height: 100%;
+  width: min(var(--container), 100% - 32px);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+#menu a {
+  display: block;
+  padding: 0 17px;
+  line-height: var(--header-h);
+  font: 700 13px/var(--header-h) var(--heading-font);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+#menu li:last-child a {
+  padding-right: 0;
+}
+.scrolled #menu a,
+.solid #menu a {
+  color: var(--heading);
+  text-shadow: none;
+}
+#menu a:hover,
+#menu a[aria-current='page'] {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Breed scherm: het menu is gewoon zichtbaar. Smal scherm: popover achter de hamburger. */
+@media (min-width: 901px) {
+  #menu:not(:popover-open) {
+    display: block;
+    position: static;
+    inset: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --header-h: 64px;
+  }
+  .logo img {
+    height: 48px;
+  }
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--white);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .scrolled .menu-toggle span,
+  .solid .menu-toggle span {
+    background: var(--heading);
+    box-shadow: none;
+  }
+  #menu {
+    inset: var(--header-h) 0 auto auto;
+    width: 100%;
+    margin: 0;
+    padding: 8px 16px 16px;
+    border: 0;
+    background: var(--white);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  #menu ul {
+    flex-direction: column;
+  }
+  #menu a,
+  .scrolled #menu a,
+  .solid #menu a {
+    color: var(--heading);
+    text-shadow: none;
+    line-height: 44px;
+    padding: 0;
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.solid ~ main {
+  padding-top: var(--header-h);
+}
+
+/* ---------- Kopfoto met paginatitel ---------- */
+
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: var(--dark);
+  height: 600px;
+}
+.banner.small {
+  height: 354px;
+}
+.banner > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner .container {
+  position: relative;
+  padding-top: calc(var(--header-h) / 2);
+}
+.banner h1 {
+  color: var(--gold);
+  margin: 0;
+}
+.banner.small h1 {
+  color: var(--white);
+  text-align: center;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 900px) {
+  .banner {
+    height: 320px;
+  }
+  .banner.small {
+    height: 260px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+}
+
+.section {
+  padding: 70px 0;
+}
+@media (max-width: 900px) {
+  .section {
+    padding: 40px 0;
+  }
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+@media (max-width: 760px) {
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+/* ---------- Lopende tekst van berichten ---------- */
+
+.prose {
+  max-width: 100%;
+}
+.prose strong {
+  color: inherit;
+}
+.prose img {
+  margin: 0 0 1.1em;
+}
+.prose h2,
+.prose h3,
+.prose h4 {
+  margin-top: 1.5em;
+}
+.prose blockquote {
+  margin: 0 0 1.1em;
+  padding-left: 20px;
+  border-left: 3px solid #ddd;
+  font-style: italic;
+}
+
+/* ---------- Voet ---------- */
+
+.site-footer {
+  background: var(--dark);
+  color: #aab4bf;
+  font-size: 13px;
+  padding: 24px 0;
+  margin-top: 60px;
+}
+.site-footer p {
+  margin: 0;
+  text-align: center;
+}
+.site-footer a {
+  color: var(--white);
+}

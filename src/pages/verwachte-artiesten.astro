@@ -1,0 +1,82 @@
+---
+import { getCollection, render } from 'astro:content';
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Banner from '../components/Banner.astro';
+import { datum } from '../lib';
+
+// ponytail: "verwacht" vs "geweest" wordt bij het bouwen bepaald; dagelijks opnieuw bouwen (GitHub Actions-cron) houdt het actueel.
+const now = Date.now();
+const all = await getCollection('agenda');
+const verwacht = all.filter((e) => +e.data.date >= now).sort((a, b) => +a.data.date - +b.data.date);
+const geweest = all.filter((e) => +e.data.date < now).sort((a, b) => +b.data.date - +a.data.date);
+const withContent = (list: typeof all) => Promise.all(list.map(async (e) => ({ e, Content: (await render(e)).Content })));
+const groups = [
+  { label: 'Verwacht', upcoming: true, items: await withContent(verwacht) },
+  { label: 'Geweest', upcoming: false, items: await withContent(geweest) },
+];
+---
+
+<Base title="Agenda">
+  <Banner title="Agenda" />
+  <div class="container section">
+    {
+      groups.map(
+        (g) =>
+          g.items.length > 0 && (
+            <section class="group">
+              <h2 class="group-title">{g.label}:</h2>
+              {g.items.map(({ e, Content }) => (
+                <article class="event" id={e.id}>
+                  <div class="poster">{e.data.image && <Image src={e.data.image} alt={`Poster ${e.data.title}`} width={500} />}</div>
+                  <div>
+                    <h2>
+                      <span class="when">{datum(e.data.date)} –</span> {e.data.title}
+                    </h2>
+                    <div class="prose">
+                      <Content />
+                    </div>
+                    {g.upcoming && e.data.tickets && (
+                      <p>
+                        <a class="button" href={e.data.tickets}>
+                          Koop tickets
+                        </a>
+                      </p>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </section>
+          ),
+      )
+    }
+  </div>
+</Base>
+
+<style>
+  .group + .group {
+    margin-top: 60px;
+  }
+  .group-title {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #0a0a0a;
+    margin-bottom: 40px;
+  }
+  .event {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  .when {
+    color: var(--accent);
+  }
+  @media (max-width: 760px) {
+    .event {
+      grid-template-columns: 1fr;
+    }
+    .poster img {
+      max-width: 320px;
+    }
+  }
+</style>

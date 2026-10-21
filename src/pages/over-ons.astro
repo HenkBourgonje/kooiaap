@@ -1,0 +1,115 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Banner from '../components/Banner.astro';
+import henk from '../assets/team/henk-bleeker.jpg';
+import harry from '../assets/team/harry-de-jong.jpg';
+import will from '../assets/team/will-vandersloot.jpg';
+import herman from '../assets/team/herman-van-der-horst.jpeg';
+
+const team = [
+  { name: 'Henk Bleeker', role: 'Organisation', photo: henk },
+  { name: 'Harry de Jong', role: 'Programmer', photo: harry },
+  { name: 'Will Vandersloot', role: 'Organisation', photo: will },
+  { name: 'Herman van der Horst', role: 'Popjournalist', photo: herman },
+];
+---
+
+<Base title="Over de Kultuurfabriek">
+  <Banner title="Over Kultuurfabriek Kooi-Aap" />
+  <div class="container section">
+    <div class="columns">
+      <div>
+        <p>
+          Kultuurfabriek Kooi-aap is een concept van fotograaf Henk Bleeker, popjournalist Harry de Jong en grafisch
+          ontwerper Will Vandersloot.
+        </p>
+        <p>In dit nieuwe cultuurcomplex bevinden zich een foto/film studio, een galerie en een poppodium.</p>
+        <p>De bedoeling is om hier met enige regelmaat een bijzonder concert te organiseren.</p>
+        <p>
+          De voormalige fabriekshallen waar ooit de wereldberoemde Kooi-aap meeneem-heftrucks werden vervaardigd, zijn
+          omgebouwd tot een sfeervolle ruimte, die met z’n podium en galerie een uitstekende ontmoetingsplaats is voor
+          muzikale en andere creatieve activiteiten.
+        </p>
+      </div>
+      <div>
+        <p>
+          ‘Ik ben zelf een groot liefhebber van Americana en country muziek,’ aldus Bleeker. Hij heeft in de loop der jaren
+          veel artiesten voor zijn camera gehad en ziet het als een nieuwe uitdaging ze naar Oude Leije te halen.
+        </p>
+        <p>
+          ‘De Kultuurfabriek Kooi-aap biedt een mogelijkheid voor reizende artiesten hier even langs te laten komen,’ legt
+          hij uit. ‘Er zijn veel singer-songwriters en bands onderweg, die op wachtdagen graag nog hun agenda gevuld zien.
+        </p>
+        <p>We hebben veel connecties in het muziekwereldje. Dat biedt genoeg perspectief voor de toekomst.’</p>
+      </div>
+    </div>
+
+    <div class="separator"><span>Het team</span></div>
+
+    <div class="team">
+      {
+        team.map((m) => (
+          <figure>
+            <Image src={m.photo} alt={m.name} width={400} height={400} fit="cover" />
+            <figcaption>
+              <h3>{m.name}</h3>
+              <span>{m.role}</span>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+  </div>
+</Base>
+
+<style>
+  .separator {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 75px 0;
+  }
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-top: 1px solid #ddd;
+  }
+  .separator span {
+    background: var(--dark);
+    color: #ececec;
+    font: 700 12px var(--heading-font);
+    padding: 8px 22px;
+  }
+  .team {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+  }
+  figure {
+    margin: 0;
+    background: var(--white);
+  }
+  figure img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+  figcaption {
+    padding: 23px 16px;
+    text-align: center;
+  }
+  figcaption h3 {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  figcaption span::after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    background: #121619;
+    margin: 12px auto 0;
+  }
+</style>
